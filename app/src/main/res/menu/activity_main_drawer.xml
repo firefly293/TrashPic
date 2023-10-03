@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_cardboard"
+            android:title="Cardboard" />
+        <item
+            android:id="@+id/nav_glass"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Glass" />
+        <item
+            android:id="@+id/nav_metal"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Metal" />
+        <item
+            android:id="@+id/nav_paper"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Paper" />
+        <item
+            android:id="@+id/nav_plastic"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Plastic" />
+        <item
+            android:id="@+id/nav_trash"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Trash" />
+    </group>
+</menu>
