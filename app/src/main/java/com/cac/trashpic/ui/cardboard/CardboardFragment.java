@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,8 +25,8 @@ public class CardboardFragment extends Fragment {
         binding = FragmentCardboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textCardboard;
-        cardboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textCardboard;
+        //cardboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

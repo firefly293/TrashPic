@@ -11,21 +11,22 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.cac.trashpic.databinding.FragmentCardboardBinding;
+import com.cac.trashpic.databinding.FragmentPlasticBinding;
 
 public class PlasticFragment extends Fragment {
 
-    private FragmentCardboardBinding binding;
+    private FragmentPlasticBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        PlasticViewModel cardboardViewModel =
+        PlasticViewModel plasticViewModel =
                 new ViewModelProvider(this).get(PlasticViewModel.class);
 
-        binding = FragmentCardboardBinding.inflate(inflater, container, false);
+        binding = FragmentPlasticBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textCardboard;
-        cardboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textCardboard;
+//        cardboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

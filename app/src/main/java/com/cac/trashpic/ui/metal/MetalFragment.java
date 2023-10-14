@@ -11,21 +11,22 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.cac.trashpic.databinding.FragmentCardboardBinding;
+import com.cac.trashpic.databinding.FragmentMetalBinding;
 
 public class MetalFragment extends Fragment {
 
-    private FragmentCardboardBinding binding;
+    private FragmentMetalBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        MetalViewModel cardboardViewModel =
+        MetalViewModel metalViewModel =
                 new ViewModelProvider(this).get(MetalViewModel.class);
 
-        binding = FragmentCardboardBinding.inflate(inflater, container, false);
+        binding = FragmentMetalBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textCardboard;
-        cardboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textCardboard;
+        //cardboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

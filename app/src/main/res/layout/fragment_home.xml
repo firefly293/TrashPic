@@ -3,20 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_home"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bgView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/homebg" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bgView"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="15dp"
+            android:text="TrashPic is an app to aid with your recycling! Take a picture of your garbage, and TrashPic will let you know whether you should recycle it, and give you some cool tips. Try to have a white/plain background, and have the object in the center of the frame. Click the green photo button to get started.
+\n\nGeneral Recycling Info (from kingcounty.gov)
+\n•	“Empty, clean, and dry”: Always wash and dry your recyclables
+\n•	“Keep plastic bags out”: Do not recycle plastic bags or wraps in your bin; drop them off at a store drop-off
+\n•	“Focus on the top five”: Always recycle paper, cardboard, plastic, glass, and metal
+
+"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,8 +22,8 @@ public class GlassFragment extends Fragment {
         binding = com.cac.trashpic.databinding.FragmentGlassBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        glassViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textGallery;
+//        glassViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

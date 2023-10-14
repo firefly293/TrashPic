@@ -3,20 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.plastic.PlasticFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_gallery"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bgView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/plasticbg" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bgView"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:text="Plastic"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="15dp"
+            android:text="Plastic bags or wrap:
+\n•	Reuse plastic bags
+\n•	Return plastic bags and wrap to a nearby retail location: plasticfilmrecycling.org.
+\n•	Put used plastic bags and plastic wrap in the trash.
+\n\nNon-Recyclables:
+\n•	Plastic utensils and take-out containers
+\n•	Produce stickers
+\n•	Styrofoam
+\n•	Diapers and pet waste
+\n•	Empty hazardous materials containers
+\n\nOtherwise:
+\n•	Lids 3” or larger can be recycled. Lids smaller than 3” should be trashed. Plastic caps of any size can be recycled when screwed onto bottles.
+\n•	Make sure it is clean, empty, and dry.
+\n•	Recycle it!
+
+"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
