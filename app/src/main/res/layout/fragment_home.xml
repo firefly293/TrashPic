@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFE">
 
 
     <RelativeLayout
@@ -28,10 +29,11 @@
             android:src="@drawable/homebg" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/titleTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/bgView"
+            android:fontFamily="@font/baloo_bhaijaan"
             android:paddingLeft="15dp"
             android:paddingBottom="5dp"
             android:text="Home"
@@ -40,25 +42,78 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/responseTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bgView"
+            android:fontFamily="@font/baloo_bhaijaan"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="Welcome to TrashPic!"
+            android:textColor="#0020FF"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/howToUseTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_below="@+id/textView2"
+            android:layout_below="@id/responseTV"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/baloo_bhaijaan"
+            android:paddingLeft="15dp"
+            android:text="How to Use:"
+            android:textColor="#1F8F00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/instructionsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/howToUseTV"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="15dp"
+            android:text="TrashPic is an app to aid with your recycling! Take a picture of your garbage, and TrashPic will let you know whether you should recycle it, and give you some cool tips. Try to have a white/plain background, and have the object in the center of the frame. Click the green photo button to get started.
+"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tipsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/instructionsTV"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/baloo_bhaijaan"
+            android:paddingLeft="15dp"
+            android:text="General Recycling Tips:"
+            android:textColor="#1F8F00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/notesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/tipsTV"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:padding="15dp"
-            android:text="TrashPic is an app to aid with your recycling! Take a picture of your garbage, and TrashPic will let you know whether you should recycle it, and give you some cool tips. Try to have a white/plain background, and have the object in the center of the frame. Click the green photo button to get started.
-\n\nGeneral Recycling Info (from kingcounty.gov)
-\n•	“Empty, clean, and dry”: Always wash and dry your recyclables
-\n•	“Keep plastic bags out”: Do not recycle plastic bags or wraps in your bin; drop them off at a store drop-off
-\n•	“Focus on the top five”: Always recycle paper, cardboard, plastic, glass, and metal
+            android:fontFamily="sans-serif"
+            android:paddingLeft="15dp"
+            android:text="•	Always empty, clean, and dry your recyclables
+            \n• No liquids or food
+            \n•	Only recycle if you're sure
 
 "
-            android:textColor="@color/black"
+
+            android:textColor="#000000"
             android:textSize="20sp" />
 
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFE">
 
 
     <RelativeLayout
@@ -28,10 +29,11 @@
             android:src="@drawable/glassbg" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/titleTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/bgView"
+            android:fontFamily="@font/baloo_bhaijaan"
             android:paddingLeft="15dp"
             android:paddingBottom="5dp"
             android:text="Glass"
@@ -40,26 +42,53 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/responseTV"
+            android:layout_width="255dp"
+            android:layout_height="79dp"
+            android:layout_below="@id/bgView"
+            android:fontFamily="@font/baloo_bhaijaan"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="Recycle It!"
+            android:textColor="#0020FF"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/unlessTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_below="@+id/textView2"
+            android:layout_below="@id/responseTV"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/baloo_bhaijaan"
+            android:paddingLeft="15dp"
+            android:text="Unless..."
+            android:textColor="#FF0000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/notesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/unlessTV"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginBottom="-34dp"
+            android:fontFamily="sans-serif"
             android:padding="15dp"
-            android:text="Non-Recyclables:
-\n•	Broken ceramic
-\n•	Broken glass
-\n•	Mirrors
-\n\nOther notes:
-\n•	Empty, clean, and dry glass bottles and containers
-
+            android:text="1. It is broken
+            \n\t\t\t\t• Trash it!
+            \n\n2. It is a mirror
+            \n\t\t\t\t•	Trash it!
+            \n\nOther notes:
+            \n\t\t\t\t•	Empty, clean, and dry the glass.
 "
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:textSize="20sp" />
 
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
