@@ -81,6 +81,8 @@
             android:text="1. It is food soiled (e.g., paper towels)
             \n\t\t\t\t• Remove any labels or shiny surfaces
             \n\t\t\t\t• Compost it!
+            \n2. It is shredded or very small
+            \n\t\t\t\t• Put in a plastic bag and trash it
 
 "
             android:textColor="#000000"

@@ -49,6 +49,7 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:3.10.0")
     implementation("com.google.code.gson:gson:2.8.7")
+    implementation("com.google.android.material:material:1.1.0")
 
     constraints {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22") {

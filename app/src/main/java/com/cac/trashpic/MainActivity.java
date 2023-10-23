@@ -8,6 +8,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Variables.snackView = view;
+
                 Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, Variables.CAMERA_REQUEST);
             }
@@ -96,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
             Log.i("get img", "saved img in bmp");
             //Variables.imageView.setImageBitmap(Variables.bmp);
 
+            //Toast.makeText(MainActivity.this, (CharSequence)"Checking", Toast.LENGTH_SHORT).show();
+            //Snackbar.make(Variables.snackView, (CharSequence)"Checking", Snackbar.LENGTH_SHORT).show();
+
             ByteArrayOutputStream byteArrayBitmapStream = new ByteArrayOutputStream();
             Variables.bmp.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayBitmapStream);
             byte[] byteArray = byteArrayBitmapStream.toByteArray();
@@ -116,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(Call call, IOException e) {
                     Log.i("error", "request failure");
+                    //Toast.makeText(MainActivity.this, (CharSequence)"Error - try again in 20 seconds", Toast.LENGTH_SHORT).show();
+                    //Snackbar.make(Variables.snackView, (CharSequence)"Error - try again in 20 seconds", Snackbar.LENGTH_SHORT).show();
                 }
                 @Override
                 public void onResponse(Call call, Response response) throws IOException{

@@ -1,6 +1,7 @@
 package com.cac.trashpic;
 
 import android.graphics.Bitmap;
+import android.view.View;
 
 import androidx.navigation.NavController;
 
@@ -26,5 +27,7 @@ public class Variables {
     public static JsonObject resultJSON;
 
     public static int resultID = -1;
+
+    public static View snackView;
 
 }
